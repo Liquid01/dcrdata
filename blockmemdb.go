@@ -49,6 +49,7 @@ func (s *BlockDataToMemdb) Store(data *blockData) error {
 	blockSummary := apitypes.BlockDataBasic{
 		Height:         uint32(s.Height),
 		Size:           data.header.Size,
+		Hash:			data.header.Hash,
 		Difficulty:     data.header.Difficulty,
 		StakeDiff:      data.header.SBits,
 		Time:           data.header.Time,
